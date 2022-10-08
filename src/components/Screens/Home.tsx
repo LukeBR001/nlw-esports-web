@@ -45,6 +45,7 @@ export function Home() {
           return (
             <GameBanner
               key={game.id}
+              id={game.id}
               bannerUrl={game.bannerUrl}
               title={game.title}
               adsCount={game._count.ads}

@@ -1,10 +1,16 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./Routes";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Ads } from './components/Screens/Ads'
+import { Home } from './components/Screens/Home'
 
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/ads/' element={<Ads />} />
+      </Routes>
+    </Router>
   )
 }
 
